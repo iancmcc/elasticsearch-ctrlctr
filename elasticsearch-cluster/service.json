@@ -1,0 +1,23 @@
+{
+    "Title": "elasticsearch-cluster",
+    "Description": "ElasticSearch Service",
+    "RAMCommitment": "1G",
+    "CPUCommitment": 1,
+    "Launch": "auto",
+    "Name": "ElasticSearch",
+    "Version": "1.4.2",
+    "Command": "/usr/local/elasticsearch/bin/elasticsearch",
+    "Endpoints": [
+        {
+            "Name": "elasticsearch",
+            "Application": "elasticsearch",
+            "PortNumber": 9200,
+            "Protocol": "tcp",
+            "Purpose": "export"
+        }
+    ],
+    "ImageID": "iancmcc/elasticsearch:1.4.2",
+    "Instances": {
+        "min": 1
+    }
+}
