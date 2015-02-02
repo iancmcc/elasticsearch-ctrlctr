@@ -1,1 +1,1 @@
-Elasticsearch service
+ElasticSearch

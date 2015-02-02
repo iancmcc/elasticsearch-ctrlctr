@@ -25,7 +25,8 @@
             "Application": "elasticsearch",
             "PortNumber": 9200,
             "Protocol": "tcp",
-            "Purpose": "export"
+            "Purpose": "export",
+            "Vhosts": ["elasticsearch"]
         },
         {
             "Name": "elasticsearch-peer",
