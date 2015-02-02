@@ -5,7 +5,7 @@ transport:
     tcp.port: 9300
     publish_host: 127.0.0.1
     publish_port: {{ plus 9301 .InstanceID }}
-cluster.name: elasticsearch-cluster
+cluster.name: elasticsearch
 discovery.zen.ping:
     multicast.enabled: false
     unicast.hosts: [{{ with $esn := .Instances }}{{ range (each $esn) }}"127.0.0.1:{{ plus 9301 . }}"{{if ne (plus 1 .) $esn }},{{ end }}{{ end }}{{ end }}]
